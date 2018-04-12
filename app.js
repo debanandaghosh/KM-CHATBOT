@@ -59,14 +59,21 @@ bot.dialog('greetings',
 ).triggerAction({
     matches: 'greetings'
     });
-function createAnimationCard(session) {
+ function createAnimationCard(session) {
     return new builder.AnimationCard(session)
-       // .title('')
-        //.subtitle('Animation Card')
-        //.image(builder.CardImage.create(session, 'https://docs.microsoft.com/en-us/bot-framework/media/how-it-works/architecture-resize.png'))
-        .media([
-            { url: 'https://raw.githubusercontent.com/codeislyf/SMRTOctVersion/master/images/waving.gif' }
-        ]);
+         .title('')
+         .subtitle('Animation Card')
+         //.image(builder.CardImage.create(session,'https://4.bp.blogspot.com/-f7NYArnP3ws/T_5a63678lI/AAAAAAAAAtU/depgJoQxQo4/s1600/smiley-rire1209759738.jpg'))
+         // .media([
+         //    { url:'https://4.bp.blogspot.com/-f7NYArnP3ws/T_5a63678lI/AAAAAAAAAtU/depgJoQxQo4/s1600/smiley-rire1209759738.jpg'}
+         //   .image(builder.CardImage.create(session,'https://raw.githubusercontent.com/debanandaghosh/PROJECT-12/master/images/waving.gif'))
+         // .media([
+         //    { url:'https://raw.githubusercontent.com/debanandaghosh/PROJECT-12/master/images/waving.gif'}
+             
+              .image(builder.CardImage.create(session,'http://localhost:5000/waving.gif'))
+              .media([
+              { url:'http://localhost:5000/waving.gif'}
+         ]);
 }
 bot.dialog('Endcase',
     (session, args, next) => {
